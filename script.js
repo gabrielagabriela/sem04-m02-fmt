@@ -20,3 +20,35 @@ let quadrados = arrayNumeros.map((numero) => {
 })
 
 console.log(quadrados)
+
+// Exercicio 04, 05, 06, 07 e 08 Semana 04
+class Produto {
+  constructor(nome, preco, quantidade) {
+      this.nome = nome;
+      this.preco = preco;
+      this.quantidade = quantidade;
+  }
+
+  vender(quantidadeVendida){
+    if(quantidadeVendida <= this.quantidade){
+      this.quantidade -= quantidadeVendida;
+      return `Quantidade atualizada: ${this.quantidade}`
+    } else {
+      return `Estoque insuficiente`
+    }
+  }
+
+  repor(quantidadeReposta){
+    this.quantidade += quantidadeReposta
+    return `Quantidade atualizada: ${this.quantidade}`
+  }
+
+  mostrarEstoque(){
+    return `O produto ${this.nome} possuí ${this.quantidade} unidades disponíveis`
+  }
+
+  atualizarPreco(novoValor){
+    this.preco = novoValor;
+    return `Preço atualizado: R$ ${this.preco}`
+  }
+}
