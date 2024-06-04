@@ -13,3 +13,10 @@ let numerosPares = arrayNumeros.filter((x) => {
 })
 
 console.log(numerosPares)
+
+// Exercicio 03 Semana 04
+let quadrados = arrayNumeros.map((numero) => {
+  return numero*numero;
+})
+
+console.log(quadrados)
